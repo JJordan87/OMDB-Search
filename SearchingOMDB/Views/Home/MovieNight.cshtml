@@ -1,0 +1,17 @@
+﻿@model List<MoviesModel>
+<form method="post">
+    1:<input type="text" name="Title1"/>
+    2:<input type="text" name="Title2"/>
+    3:<input type="text" name="Title3"/>
+    <input type="Submit"/>
+</form>
+
+<h3>Movies matching those Titles</h3>
+
+@if(Model != null)
+{
+    @foreach(MoviesModel m in Model)
+    {
+        <p>@m.Title Runtime = @m.Runtime</p>
+    }
+}

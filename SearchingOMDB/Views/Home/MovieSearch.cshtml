@@ -1,0 +1,16 @@
+﻿@model List<MoviesModel>
+
+<form method="post">
+    Enter a movie TitleP<input type="text" name="Title"/>
+    <input type="Submit"/>
+</form>
+
+<h2>Movies matching that Title</h2>
+
+@if(Model !=null)
+{
+    foreach(MoviesModel m in Model)
+    {
+        <p>@m.Title</p>
+    }
+} 
